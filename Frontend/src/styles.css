@@ -22,3 +22,56 @@ html, body {
 .fixed-footer{
   bottom: 0;
 }
+
+/*Check this part later*/
+
+p, li {
+  color: #fff;
+  display: block;
+  font: "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier;
+  padding: 24px 15px;
+  text-align: center;
+}
+
+section {
+  float: left;
+}
+
+.major-section {
+  width: 40%;
+}
+
+.minor-section {
+  width: 30%;
+}
+
+.content-display {
+  display: block;
+  margin: auto;
+}
+
+.search-bar {
+  margin:auto;
+  padding: 3% 35%;
+}
+
+#search-text {
+  margin-bottom: 5%;
+
+}
+
+#like-button {
+  margin-left: 73%;
+}
+
+#search-button {
+  margin-left: 0%;
+}
+
+#bookmarks {
+  margin-right: 40px;
+}
+
+.info-button {
+  white-space: normal;
+}
