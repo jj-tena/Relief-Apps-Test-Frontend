@@ -1,4 +1,4 @@
-<searchBar></searchBar>
-<videoView></videoView>
-<History></History>
+<searchBar (emitJSON)='inspectJSON($event)'></searchBar>
+<videoView [embedLink]='embedLinkForVideoView'></videoView>
+<History [history]='historyList' (emitEmbedLink)='changeVideoFromHistory($event)'></History>
 <Bookmarks></Bookmarks>

@@ -43,6 +43,7 @@ section {
 
 .minor-section {
   width: 30%;
+  text-align: center;
 }
 
 .content-display {
@@ -61,11 +62,11 @@ section {
 }
 
 #like-button {
-  margin-left: 73%;
+  margin-left: 45%;
 }
 
 #search-button {
-  margin-left: 0%;
+  margin-left: 40%;
 }
 
 #bookmarks {

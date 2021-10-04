@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -15,11 +16,12 @@ import { BookmarksComponent } from './bookmarks/bookmarks.component';
     VideoViewComponent,
     HistoryComponent,
     BookmarksComponent
-  ],
+    ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
-  ],
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
