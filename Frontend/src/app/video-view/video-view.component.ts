@@ -30,7 +30,9 @@ export class VideoViewComponent implements OnInit {
   }
 
   like(){
-    this.emitTitle.emit(this.title);
+    if (this.title !== ""){
+      this.emitTitle.emit(this.title);
+    }
   }
 
 
