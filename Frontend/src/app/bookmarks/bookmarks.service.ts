@@ -18,7 +18,10 @@ export class BookmarksService {
     return this.httpClient.get(BASE_URL).pipe() as Observable<Bookmark[]>;
   }
 
-  addBookmark(){
-
+  addBookmark(bookmark: Bookmark){
+    this.httpClient.post(BASE_URL, bookmark).subscribe(
+      response => console.log(response),
+      error => console.error(error)
+      );
   }
 }

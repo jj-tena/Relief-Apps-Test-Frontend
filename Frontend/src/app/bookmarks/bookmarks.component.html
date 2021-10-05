@@ -1,5 +1,8 @@
 <section class="minor-section">
   <p>Bookmarks</p>
-  <ul id="bookmarks">
-  </ul>
+  <div *ngFor="let item of bookmarks">
+    <button class="btn btn-outline-danger my-2 my-sm-0 info-button">{{item.title}}</button>
+    <li>
+    </li>
+  </div>
 </section>

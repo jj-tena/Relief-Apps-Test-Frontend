@@ -12,15 +12,15 @@ export class HistoryComponent implements OnInit {
   history: History[] = [];
 
   @Output()
-  emitEmbedLink = new EventEmitter<string>();
+  emitEmbedLink = new EventEmitter<History>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  changeVideo(embedLink: string){
-    this.emitEmbedLink.emit(embedLink);
+  changeVideo(historyToChange: History){
+    this.emitEmbedLink.emit(historyToChange);
   }
 
 }

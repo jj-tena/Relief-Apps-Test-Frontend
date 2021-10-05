@@ -1,5 +1,5 @@
 import { sanitizeIdentifier } from '@angular/compiler';
-import { Component, Input, OnInit, SecurityContext } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, SecurityContext } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browser';
 
 @Component({
@@ -12,6 +12,12 @@ export class VideoViewComponent implements OnInit {
   @Input()
   embedLink: string = "";
 
+  @Input()
+  title: string = "";
+
+  @Output()
+  emitTitle= new EventEmitter<string>();
+
   trustedEmbedLink: SafeResourceUrl | undefined;
 
   ngOnInit(): void {
@@ -21,6 +27,10 @@ export class VideoViewComponent implements OnInit {
 
   ngOnChanges(embedLink: string): void {
     this.trustedEmbedLink = this.sanitizer.bypassSecurityTrustResourceUrl(this.embedLink);
+  }
+
+  like(){
+    this.emitTitle.emit(this.title);
   }
 
 
