@@ -19,8 +19,13 @@ export class HistoryComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  firstTimeClicked: boolean = true;
+
   changeVideo(historyToChange: History){
-    this.emitEmbedLink.emit(historyToChange);
+    if (this.firstTimeClicked){
+      this.emitEmbedLink.emit(historyToChange);
+      this.firstTimeClicked = false;
+    }
   }
 
 }

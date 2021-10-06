@@ -33,6 +33,10 @@ p, li {
   text-align: center;
 }
 
+#bookmarksButton {
+  
+}
+
 section {
   float: left;
 }
@@ -63,6 +67,7 @@ section {
 
 #like-button {
   margin-left: 45%;
+  margin-top: 40%;
 }
 
 #search-button {
